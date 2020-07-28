@@ -1,0 +1,33 @@
+{
+  "name": "mxtooltiptwo",
+  "widgetName": "Mxtooltiptwo",
+  "version": "1.0.0",
+  "description": "Another bloody attempt to get a tooltip to work",
+  "copyright": "MIT",
+  "author": "Boris Scharinger",
+  "config": {
+    "widgetPath": "../..//widgets",
+    "projectPath": "../..//",
+    "mendixHost": "http://localhost:8080",
+    "developmentPort": "3000"
+  },
+  "packagePath": "siemens",
+  "scripts": {
+    "start": "concurrently \"pluggable-widgets-tools start:server --open\" \"npm:dev\"",
+    "dev": "pluggable-widgets-tools start:js",
+    "build": "pluggable-widgets-tools build:js",
+    "lint": "pluggable-widgets-tools lint",
+    "lint:fix": "pluggable-widgets-tools lint:fix",
+    "prerelease": "npm run lint",
+    "release": "pluggable-widgets-tools release:js"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "@mendix/pluggable-widgets-tools": "^8.9.2"
+  },
+  "dependencies": {
+    "@hot-loader/react-dom": "^16.8.6",
+    "classnames": "^2.2.6",
+    "react-tooltip": "^4.2.7"
+  }
+}

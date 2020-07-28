@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<widget id="siemens.mxtooltiptwo.Mxtooltiptwo" pluginWidget="true" needsEntityContext="true" offlineCapable="true"
+        supportedPlatform="Web"
+        xmlns="http://www.mendix.com/widget/1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.mendix.com/widget/1.0/ ../node_modules/mendix/custom_widget.xsd">
+    <name>Mxtooltiptwo</name>
+    <description>Another bloody attempt to get a tooltip to work</description>
+    <icon/>
+    <properties>
+        <propertyGroup caption="Content">
+            <property key="targetClassName" type="string" required="true">
+	            <caption>Target Class Name</caption>
+	            <description>DOM Element to which the tooltip refers</description>
+            </property>
+            <property key="helpText" type="textTemplate" multiline="true" required="true">
+	            <caption>Tooltip content</caption>
+                <description/>
+            </property>
+            <property key="multiline" type="boolean" defaultValue="false">
+                <caption>Multiline (allows breaks)?</caption>
+                <description/>
+            </property>
+            <property key="renderHTML" type="boolean" defaultValue="false">
+                <caption>render as HTML?</caption>
+                <description/>
+            </property>
+            <property key="wrapper" type="enumeration" required="true" defaultValue="div">
+                <caption>Wrapper element for tooltip</caption>
+                <description/>
+                <enumerationValues>
+		            <enumerationValue key="div">div</enumerationValue>
+		            <enumerationValue key="span">span</enumerationValue>
+                </enumerationValues>
+            </property>
+        </propertyGroup>
+        <propertyGroup caption="Display">    
+             <property key="type" type="enumeration" required="true" defaultValue="dark">
+                <caption>Style</caption>
+                <description/>
+                <enumerationValues>
+		            <enumerationValue key="dark">Dark</enumerationValue>
+		            <enumerationValue key="light">Light</enumerationValue>
+		            <enumerationValue key="error">Error</enumerationValue>
+		            <enumerationValue key="info">Info</enumerationValue>
+		            <enumerationValue key="warning">Warning</enumerationValue>
+		            <enumerationValue key="success">Success</enumerationValue>
+	            </enumerationValues>
+            </property>
+            <property key="effect" type="enumeration" required="true" defaultValue="float">
+                <caption>Effect</caption>
+                <description/>
+                <enumerationValues>
+		            <enumerationValue key="solid">Solid</enumerationValue>
+		            <enumerationValue key="float">Floating</enumerationValue>
+	            </enumerationValues>
+            </property>
+             <property key="place" type="enumeration" required="true" defaultValue="top">
+                <caption>Tooltip Position</caption>
+                <description/>
+                <enumerationValues>
+		            <enumerationValue key="top">top</enumerationValue>
+		            <enumerationValue key="bottom">bottom</enumerationValue>
+		            <enumerationValue key="left">left</enumerationValue>
+		            <enumerationValue key="right">right</enumerationValue>
+	            </enumerationValues>
+            </property>
+            <property key="border" type="boolean" defaultValue="false">
+                <caption>Border (1px white) ?</caption>
+                <description/>
+            </property>
+            <property key="offset" type="integer" defaultValue="10">
+                <caption>Padding (in px)</caption>
+                <description/>
+            </property>
+        </propertyGroup>
+        <propertyGroup caption="Behavior">
+            <property key="resizeHide" type="boolean" defaultValue="false">
+                <caption>Hide while window resize?</caption>
+                <description/>
+            </property>
+            <property key="scrollHide" type="boolean" defaultValue="false">
+                <caption>Hide while scrolling?</caption>
+                <description/>
+            </property>
+            <property key="clickable" type="boolean" defaultValue="false">
+                <caption>Click into the tooltip?</caption>
+                <description/>
+            </property>
+            <property key="isCapture" type="boolean" defaultValue="false">
+                <caption>Capture events?</caption>
+                <description>Custom event's propagation mode = capture</description>
+            </property>
+            <property key="delayHide" type="integer" defaultValue="200">
+                <caption>Hide Timing</caption>
+                <description>Delay (in ms) until tooltip hides</description>
+            </property>
+            <property key="delayShow" type="integer" defaultValue="200">
+                <caption>Show Timing</caption>
+                <description>Delay (in ms) until tooltip shows</description>
+            </property>
+        </propertyGroup> 
+    </properties>
+</widget>
